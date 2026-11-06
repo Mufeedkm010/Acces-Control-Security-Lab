@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Welcome, {{ session.username }}</h1>
+
+    <p>Your role: {{ session.role }}</p>
+
+    <a href="/logout">Logout</a>
+
+    <h2>Your Invoices</h2>
+
+    {% for invoice in invoices %}
+
+        <div class="card">
+
+            <h3>{{ invoice.title }}</h3>
+
+            <p>Invoice ID: {{ invoice.id }}</p>
+
+            <p>Amount: ${{ invoice.amount }}</p>
+
+            <a href="/invoice/{{ invoice.id }}">
+                View Invoice
+            </a>
+
+        </div>
+
+    {% endfor %}
+
+    <hr>
+
+    <a href="/admin">Admin Panel</a>
+
+</div>
+
+</body>
+</html>

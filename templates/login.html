@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Access Control Lab - Login</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Access Control Lab</h1>
+    <h2>Login</h2>
+
+    {% with messages = get_flashed_messages() %}
+        {% for message in messages %}
+            <p class="error">{{ message }}</p>
+        {% endfor %}
+    {% endwith %}
+
+    <form method="POST">
+
+        <label>Username</label>
+        <input type="text" name="username" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <hr>
+
+    <h3>Training Accounts</h3>
+
+    <p>Alice: alice / alice123</p>
+    <p>Bob: bob / bob123</p>
+    <p>Admin: admin / admin123</p>
+
+</div>
+
+</body>
+</html>

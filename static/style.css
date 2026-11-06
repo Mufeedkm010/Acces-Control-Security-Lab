@@ -1,0 +1,69 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f1f4f8;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 850px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #17243a;
+}
+
+h2 {
+    color: #245b91;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input {
+    width: 95%;
+    padding: 12px;
+    margin-top: 7px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #1769aa;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.card {
+    background: #f5f7fa;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+a {
+    color: #1769aa;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.error {
+    color: red;
+}
